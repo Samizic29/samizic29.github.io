@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <title>Form</title>
+        <style>
+            body{
+														background:blue;
+											}
+            caption{
+ 														text-align: center;
+														color: #fff;
+														margin-bottom: 10px;
+            }
+            th{
+														text-align: left;
+												}
+         
+            
+        </style>
+    </head>
+    <body>
+       <form method="post" action="./server.php" target="_blank">
+       <table>
+       <caption> Register Now To Be Part Of Us </caption>
+        <tr>
+           <th><label for="fname"> First Name</label></th>
+           <td> <input autofocus autocomplete="on" type = "text" name="Fname" id="Fname" placeholder="Your first name" maxlength="25" required> </td>
+        </tr>
+        <tr>
+           <th><label for="lname"> Last Name</label></th>
+           <td> <input type = "text" name="lname" id="lname" placeholder="Your last name" maxlength="25" required> </td>
+        </tr>
+        
+        <tr>
+           <th><label for="pword">Password</label></th>
+           <td> <input type = "password" name="pword" id="pword" placeholder="New password" maxlength="15" required> </td>
+        </tr>
+           
+        <tr>
+            <th> <label for="regno">Reg No</label></th>
+            <td> <input type="number" value="00213" name="regno" id="regno" size="8" step="1" readonly required/></td>
+        </tr>
+        
+        <tr>
+            <th> <label for="hobby">Hobby</label></th>
+            <td> <input type="text" value="Programming" name="hobby" id="hobby" maxlength="30" list="hobby_suggest" required/></td>
+        </tr>
+        <tr>
+            <th> <label for="age">Age</label></th>
+            <td> <input type="number" value="25" name="age" id="age" size="8" step="1" min="18" max="60" required/></td>
+        </tr>
+        <tr>
+            <th> <label for="skill">Skill</label></th>
+            <td> <input type="range" name="skill" id="skill" value="50" min="0" max="100" required/></td>
+        </tr>
+        </table>        
+        <fieldset>
+            <legend>Select a Programming Language</legend>
+            <label for="js">
+                <input type="radio" value="java script" name="plang" id="js"/>Java Script
+            </label>
+            
+            <label for="php">
+                <input type="radio" value="php" name="plang" id="php"/>PHP
+            </label>
+            
+            <label for="jv">
+                <input type="radio" value="java" name="plang" id="jv"/>Java
+            </label>
+            
+            <label for="py">
+                <input type="radio" value="python" name="plang" id="py" checked/>Python
+            </label>
+        </fieldset>
+        
+            <fieldset>
+            <legend>Select Proficiency Level</legend>
+            <label for="bg">
+                <input type="radio" value="bgin" name="plevel" id="bg"/>Beginner
+            </label>
+            
+            <label for="inter">
+                <input type="radio" value="inter" name="plevel" id="inter" checked/>Intermediate
+            </label>
+            
+            <label for="exp">
+                <input type="radio" value="exp" name="plevel" id="exp"/>Expert
+            </label>
+        </fieldset>
+        <p><label for="terms">
+             <input type="checkbox" value="on" name="terms" id="terms" checked required/> Accept Terms of Service 
+        </label></p>
+        
+        <button type="submit">Sign Up</button>
+        <button type="reset">Reset</button>
+        </form>
+        <datalist id="hobby_suggest"> 
+            <option value="music"> Music </option>
+            <option value="programming"> Programming</option>
+            <option value="sports"> Sports </option>
+            <option value="swimming"> Swimming </option>
+            <option value="painting"> Painting</option>
+            <option value="dancing"> Dancing </option>
+        </datalist>
+    </body>
+</html>
